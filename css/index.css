@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.HorizontalFlex{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row; 
+}
+
+.VerticalFlex{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column; 
+}
+
+.Main{
+  align-items: flex-start;
+  flex-basis: 10%
+}
+
+.Players{
+  justify-content: center;
+}
+
+.ShipStateIcons{
+  align-items: center;
+  width: 30%; 
+}
+
+.HugeText{
+  font-size: 120px;
+}
+
+.MediumText{
+  font-size: 100px;
+}
+
+.CenterText{
+  text-align: center;
+}
+
+.GreenBackground{
+  background-color: green;
+}
+
+.YellowBackGround{
+  background-color: yellow;
+}
+
