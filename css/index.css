@@ -27,7 +27,6 @@ body {
 
 .ShipStateIcons{
   align-items: center;
-  width: 30%; 
 }
 
 .HugeText{
@@ -47,6 +46,6 @@ body {
 }
 
 .YellowBackground{
-  background-color: yellow;
+  background-color: darkgoldenrod;
 }
 
