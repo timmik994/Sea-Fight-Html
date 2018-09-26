@@ -1,51 +1,138 @@
 body {
-  margin: 0;
+  margin: 10;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
 
-.HorizontalFlex{
+.horizontal-flex{
   display: -webkit-flex;
   display: flex;
   flex-direction: row; 
 }
 
-.VerticalFlex{
+.vertical-flex{
   display: -webkit-flex;
   display: flex;
   flex-direction: column; 
 }
 
-.Main{
+.main-content{
   align-items: flex-start;
-  flex-basis: 10%
+  flex-basis: 30%;
 }
 
-.CenterContent{
+.game-state{
+  flex-grow: 1;
+}
+
+.game-field{
+  flex-grow: 2;
+}
+
+.content-in-centre{
   justify-content: center;
 }
 
-.ShipStateIcons{
+.ship-state{
+  align-content: stretch;
+  align-items: stretch;
+
+}
+
+.ship-state-icon{
+  align-content: stretch;
   align-items: center;
+  justify-content: flex-start;
 }
 
-.HugeText{
-  font-size: 120px;
-}
-
-.MediumText{
+.huge-text{
   font-size: 100px;
 }
 
-.CenterText{
+.medium-text{
+  font-size: 40px;
+  margin: 10px 40px 20px 40px;
+}
+
+.text-in-centre{
   text-align: center;
 }
 
-.GreenBackground{
-  background-color: green;
+.green-background{
+  background-color: #25B7A2;
 }
 
-.YellowBackground{
-  background-color: darkgoldenrod;
+.yellow-background{
+  background-color: #FFAD0E;
+}
+
+.aircraft{
+  background-image: url("../Pics/aircraft.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+  height: 100px;
+  margin: 0px 10px 0px 0px;
+}
+
+.battleship{
+  background-image: url("../Pics/battleship.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+  height: 100px;
+  margin: 0px 10px 0px 0px;
+}
+
+.cruiser{
+  background-image: url("../Pics/cruiser.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+  height: 100px;
+  margin: 0px 10px 0px 0px;
+}
+
+.submarine{
+  background-image: url("../Pics/submarine.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+  height: 100px;
+  margin: 0px 10px 0px 0px;
+}
+
+.carrier{
+  background-image: url("../Pics/carrier.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+  height: 100px;
+  margin: 0px 10px 0px 0px;
+}
+
+.small-miss{
+  background-image: url("../Pics/miss.small.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 25px;
+  height: 25px;
+  margin: 0px 20px 0px 0px
+}
+
+.small-hit{
+  background-image: url("../Pics/hit.small.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 25px;
+  height: 25px;
+  margin: 0px 20px 0px 0px
 }
 

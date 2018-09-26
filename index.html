@@ -2,62 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
-    <title>React App</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Sea fight</title>
   </head>
   <body>
-    <div id="main" class="HorizontalFlex Main" >
-      <div id="GameState" class="VerticalFlex" >
-        <div id="Players" class="HorizontalFlex CenterContent" >
-          <div class="YellowBackground CenterText" >
-              <label class="HugeText" >00</label>
-              <hr>
-              <label class="MediumText">Player1</label>
+    <div id="main" class="horizontal-flex main-content">
+      <div id="game-state" class="vertical-flex">
+        <div id="players" class="horizontal-flex content-in-centre">
+          <div class="vertical-flex yellow-background text-in-centre">
+            <div class="huge-text">00</div>
+            <div>___________________</div>
+            <div class="medium-text">player 1</div>
           </div>
-          <div class="GreenBackground CenterText" >
-            <label class="HugeText" >00</label>
-              <hr>
-              <label class="MediumText">Player2</label>
+          <div class="vertical-flex green-background text-in-centre">
+            <div class="huge-text">00</div>
+            <div>___________________</div>
+            <div class="medium-text">player 2</div>
           </div>
         </div>
-        <div id="ShipsState">
-          <div class="HorizontalFlex ShipStateIcons" >
-            <img src="/Pics/aircraft.png">
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
+        <div id="ship-state" class="vertical-flex ship-state">
+          <div class="horizontal-flex ship-state-icon">
+            <div class="aircraft"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
           </div>
-          <div>
-            <img src="/Pics/battleship.png">
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
+          <div class="horizontal-flex ship-state-icon">
+            <div class="battleship"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
           </div>
-          <div>
-            <img src="/Pics/cruiser.png">
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
+          <div class="horizontal-flex ship-state-icon">
+            <div class="cruiser"></div>
+            <div class="small-hit"></div>
+            <div class="small-hit"></div>
+            <div class="small-miss"></div>
           </div>
-          <div>
-            <img src="/Pics/submarine.png">
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
+          <div class="horizontal-flex ship-state-icon">
+            <div class="submarine"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
           </div>
-          <div>
-            <img src="/Pics/carrier.png">
-            <img src="/Pics/miss.small.png" >
-            <img src="/Pics/miss.small.png" >
+          <div class="horizontal-flex ship-state-icon">
+            <div class="carrier"></div>
+            <div class="small-miss"></div>
+            <div class="small-miss"></div>
           </div>
         </div>
       </div>
-      <div id="gameField" class="GameField" >
+      <div id="game-field">
 
       </div>
     </div>
