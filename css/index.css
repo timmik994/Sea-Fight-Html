@@ -1,7 +1,13 @@
-body {
-  margin: 10;
-  padding: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+body{
+  position: fixed;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 .main-content{
@@ -9,18 +15,18 @@ body {
   display: flex;
   flex-direction: row; 
   align-items: flex-start;
-  justify-content: space-around;
-  max-width: 1280px;
-  max-height: 760px;
-  flex-basis: 30%;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
 }
 
 .game-state{
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  margin-right: 30px;
+  width: 600px;
+  height: 720px;
+  margin-right: 35px;
 }
 
 .players{
@@ -36,6 +42,10 @@ body {
   flex-direction: column; 
   background-color: #25B7A0;
   text-align: center;
+  width: 50%;
+  border-bottom: 1px #A89867 solid;
+  border-right: 1px #A89867 solid;
+  border-top:1px #A89867 solid;
 }
 
 .yellow-player-state{
@@ -44,17 +54,25 @@ body {
   flex-direction: column; 
   background-color: #FFB000;
   text-align: center;
+  width: 50%;
+  border-bottom: 1px #A89867 solid;
+  border-left: 1px #A89867 solid;
+  border-top:1px #A89867 solid;
 }
 
 .player-points{
-  font-size: 110px;
+  font-family: 'Segoe UI' sans-serif ;
+  color: #494B48;
+  font-size: 100px;
 }
 
 .player-name{
   font-size: 40px;
-  margin: 10px 20px 20px 20px;
-  border-top: 1px solid black;
-  padding: 20px 40px 0px 40px;
+  font-family: 'Segoe UI' sans-serif ;
+  color: #494B48;
+  margin: 10px 30px 20px 30px;
+  border-top: 1px solid #494B48;
+  padding: 20px 40px 20px 40px;
 }
 
 .fleet-state{
@@ -70,87 +88,70 @@ body {
   display: flex;
   flex-direction: row; 
   align-items: flex-end;
+  align-content: flex-end;
   justify-content: flex-start;
-  margin-top: 8px;
+  margin-top: 20px;
+}
+
+.ship{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+  height: 80px;
+  margin: 0px 40px 0px 0px;
 }
 
 .aircraft{
   background-image: url("../Pics/aircraft.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
 
-  width: 50%;
-  height: 100px;
-  margin: 0px 10px 0px 0px;
 }
 
 .battleship{
   background-image: url("../Pics/battleship.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 50%;
-  height: 100px;
-  margin: 0px 10px 0px 0px;
 }
 
 .cruiser{
   background-image: url("../Pics/cruiser.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 50%;
-  height: 100px;
-  margin: 0px 10px 0px 0px;
 }
 
 .submarine{
   background-image: url("../Pics/submarine.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 50%;
-  height: 100px;
-  margin: 0px 10px 0px 0px;
 }
 
 .carrier{
   background-image: url("../Pics/carrier.png");
+}
+
+.ship-live{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 50%;
-  height: 100px;
-  margin: 0px 10px 0px 0px;
+  width: 25px;
+  height: 25px;
+  margin: 0px 27px 10px 0px
 }
 
 .undamaged{
   background-image: url("../Pics/miss.small.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 25px;
-  height: 25px;
-  margin: 0px 25px 25px 0px
 }
 
 .damaged{
   background-image: url("../Pics/hit.small.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 25px;
-  height: 25px;
-  margin: 0px 25px 25px 0px
 }
 
 .game-field{
   display: -webkit-flex;
   display: flex;
-  flex-direction: column; 
+  flex-direction: row;
+  flex-wrap: wrap; 
   height: 100%;
-  border: 3px solid #FDB200;
+  width: 710px;
+  height: 710px;
+  min-width: 710px;
+  outline: 4px solid #FDB200;
+  border-right: 1px #989898 solid;
+  border-bottom: 1px #989898 solid;
 }
 
 .game-field-row{
@@ -159,13 +160,13 @@ body {
   flex-direction: row; 
 }
 
-.empty-cell{
+.cell{
   background-color: white;
-  border: 0.2px;
-  border-style: solid;
+  border-top: 1px solid ;
+  border-left: 1px solid;
   border-color: #989898;
-  height: 75px;
-  width: 75px;
+  height: 70px;
+  width: 70px;
 }
 
 .miss-cell{
@@ -173,11 +174,6 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  border: 0.2px;
-  border-style: solid;
-  border-color: #989898;
-  height: 75px;
-  width: 75px;
 }
 
 .hit-cell{
@@ -185,10 +181,5 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  border: 0.2px;
-  border-style: solid;
-  border-color: #989898;
-  height: 75px;
-  width: 75px;
 }
 
